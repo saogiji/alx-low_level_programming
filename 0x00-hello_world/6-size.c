@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define PRINT6(Type) printf("size of " #Type ": %zu byte(s)\n", sizeof(Type))
+#define PRINT6(Type) printf("size of a " #Type ": %zu byte(s)\n", sizeof(Type))
 
 /**
  * main - Entry point
@@ -9,7 +9,7 @@
 int main(void)
 {
 	PRINT6(char);
-	PRINT6(int);
+	printf("Size of an int: %ld byte(s)\n", sizeof(int));
 	PRINT6(long int);
 	PRINT6(long long int);
 	PRINT6(float);
