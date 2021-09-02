@@ -1,26 +1,30 @@
 #include <stdio.h>
 
-
 /**
- * main - prints the largest prime factor of the number 612852475143
- * followed by a new line
- * Return: Always 0 (Success)
+ * main - program that prints out the highest prime
+ * Return: 0
  */
 int main(void)
 {
-	int n, i, d;
+	int i = 2;
+	long n = 612852475143;
 
-	d = 50829601;
-	n = 150;
 
-	for (i = 3; i <= n; i = i + 2)
+	while (i < n)
 	{
 		while (n % i == 0)
 		{
-			n = n / i;
+			if (n == i)
+			{
+				break;
+			}
+			n /= i;
 		}
+		i++;
+
+
 	}
-	printf("%d", d);
-	printf("\n");
+
+	printf("%lu\n", n);
 	return (0);
 }
