@@ -6,6 +6,8 @@
  *
  *@argv: argument vector.
  *
+ *@argc: unused parameter.
+ *
  *Return: Always (0) success.
  */
 
