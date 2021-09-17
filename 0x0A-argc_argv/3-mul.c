@@ -14,6 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int a, b, product;
+
 	if (argc == 3)
 	{
 		a = atoi(argv[1]);
