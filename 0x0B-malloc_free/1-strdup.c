@@ -13,19 +13,25 @@
 
 char *_strdup(char *str)
 {
-	char *duplicate_num;
-	int i = 0, len = 0;
+	char *dup;
+	unsigned int i, len;
 
-	duplicate_num = malloc(sizeof(char) * (len + 1));
-	if (str == 0 || duplicate_num == NULL)
-	{
+	i = 0;
+	len = 0;
+
+	if (str == NULL)
 		return (NULL);
-	}
-	for (i = 0; str[i]; i++)
-	{
-		duplicate_num[i] = str[i];
+
+	while (str[len])
 		len++;
-	}
-	duplicate_num[len] = '\0';
-	return (duplicate_num);
+
+	dup = malloc(sizeof(char) * (len + 1));
+
+	if (dup == NULL)
+		return (NULL);
+
+	while ((dup[i] = str[i]) != '\0')
+		i++;
+
+	return (dup);
 }
